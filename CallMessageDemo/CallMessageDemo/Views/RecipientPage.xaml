@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CallMessageDemo.Views.RecipientPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin Forms!" />
+
+            <Label Text="Enter reciepient username"
+               TextColor="Purple"
+               FontSize="Medium"/>
+
+            <Entry x:Name="reciepientId"
+               Placeholder="enter username here"
+               PlaceholderColor="MediumAquamarine"
+               TextColor="Purple"
+               FontSize="Medium"/>
+
+            <Button x:Name="imBtn"
+                Text="IM"
+                TextColor="White"
+                BackgroundColor="Purple"/>
+
+            <Button x:Name="videoCallBtn"
+                Text="Video"
+                TextColor="White"
+                BackgroundColor="Purple"/>
+
+            <Button x:Name="voiceCallBtn"
+                Text="Voice"
+                TextColor="White"
+                BackgroundColor="Purple"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

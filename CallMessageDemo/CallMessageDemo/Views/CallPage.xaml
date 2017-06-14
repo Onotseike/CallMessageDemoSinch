@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:roxv="clr-namespace:Rox;assembly=Rox.Xamarin.Video.Portable"
+             x:Class="CallMessageDemo.Views.CallPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin Forms!" />
+
+            <Label x:Name="reciepientId"
+                Text=""
+               TextColor="Purple"
+               FontSize="Medium"/>
+
+            <Label x:Name="callState"
+                Text=""
+               TextColor="Purple"
+               FontSize="Medium"/>
+
+            <Label x:Name="callDuration"
+                Text="0:00"
+               TextColor="Purple"
+               FontSize="Medium"/>
+
+            <roxv:VideoView x:Name="videoFeed"/>
+            <
+
+            <Button x:Name="stopBtn"
+                Text="STOP"
+                TextColor="White"
+                BackgroundColor="Red"/>
+
+            <Button x:Name="videoCallBtn"
+                Text="Video"
+                TextColor="White"
+                BackgroundColor="Purple"/>
+
+            <Button x:Name="voiceCallBtn"
+                Text="Voice"
+                TextColor="White"
+                BackgroundColor="Purple"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
