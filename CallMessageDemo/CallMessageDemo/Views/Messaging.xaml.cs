@@ -12,9 +12,12 @@ namespace CallMessageDemo.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Messaging : ContentPage
     {
+        List<string> Lister;
         public Messaging()
         {
+            Lister = new List<string>();
             InitializeComponent();
+           // msgThread.ItemsSource = Lister;
         }
     }
 }

@@ -5,6 +5,16 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Welcome to Xamarin Forms!" />
+
+            <!--<ListView x:Name="msgThread"
+                      VerticalOptions="CenterAndExpand"
+                      HorizontalOptions="CenterAndExpand">
+                
+            </ListView>/>-->
+
+            <EntryCell x:Name="msgText"
+                       HorizontalTextAlignment="Start"/>
+            <Button x:Name="sendBtn"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

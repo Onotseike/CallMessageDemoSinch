@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:roxv="clr-namespace:Rox;assembly=Rox.Xamarin.Video.Portable"
+             xmlns:roxv="clr-namespace:Rox;assembly=Rox.Xamarin.Video.Portable"            
              x:Class="CallMessageDemo.Views.CallPage">
     <ContentPage.Content>
         <StackLayout>
@@ -23,7 +23,7 @@
                FontSize="Medium"/>
 
             <roxv:VideoView x:Name="videoFeed"/>
-            <
+            
 
             <Button x:Name="stopBtn"
                 Text="STOP"

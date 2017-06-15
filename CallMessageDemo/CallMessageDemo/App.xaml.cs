@@ -13,7 +13,7 @@ namespace CallMessageDemo
         {
             InitializeComponent();
 
-            MainPage = new CallMessageDemo.MainPage();
+            MainPage = new CallMessageDemo.Views.Messaging();
         }
 
         protected override void OnStart()
