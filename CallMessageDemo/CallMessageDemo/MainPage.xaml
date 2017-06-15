@@ -22,7 +22,8 @@
         <Button x:Name="loginBtn"
                 Text="Login"
                 TextColor="White"
-                BackgroundColor="Purple"/>
+                BackgroundColor="Purple"
+                Clicked="loginBtn_Clicked"/>
     </StackLayout>
 
 </ContentPage>

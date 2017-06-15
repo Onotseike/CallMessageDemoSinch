@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CallMessageDemo.InterfaceImplements;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,16 +10,17 @@ namespace CallMessageDemo
 {
     public partial class App : Application
     {
+        public SinchService sinchService;
         public App()
         {
             InitializeComponent();
-
-            MainPage = new CallMessageDemo.Views.Messaging();
+            sinchService = new SinchService();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            // Handle when your app starts            
         }
 
         protected override void OnSleep()

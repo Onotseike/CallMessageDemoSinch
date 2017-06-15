@@ -17,6 +17,7 @@ using Android.Util;
 using CallMessageDemo.Droid.Helpers;
 using Xamarin.Forms;
 using CallMessageDemo.Droid.InterfaceImplementations;
+using System.Threading.Tasks;
 
 [assembly: Xamarin.Forms.Dependency(typeof(SinchService))]
 namespace CallMessageDemo.Droid.InterfaceImplementations
@@ -100,8 +101,8 @@ namespace CallMessageDemo.Droid.InterfaceImplementations
                 mSinchClient.MessageClient.AddMessageClientListener(new SinchMessageClientListener(this));
 
                 mSinchClient.Start();
-                Log.Debug(TAG, "Started1!!!!!!!!!!!!!!!!!!!!!11");
-            }
+                Log.Debug(TAG, "Started1!!!!!!!!!!!!!!!!!!!!!11");              
+            }           
         }
 
         public void StopSinchClient()

@@ -12,8 +12,16 @@ namespace CallMessageDemo.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecipientPage : ContentPage
     {
+        private string userId;
+
         public RecipientPage()
         {
+            InitializeComponent();
+        }
+
+        public RecipientPage(string userId)
+        {
+            this.userId = userId;
             InitializeComponent();
         }
     }
