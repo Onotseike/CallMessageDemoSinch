@@ -4,7 +4,8 @@
              x:Class="CallMessageDemo.Views.RecipientPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <Label x:Name="userId"
+                   Text="Welcome to Xamarin Forms!" />
 
             <Label Text="Enter reciepient username"
                TextColor="Purple"
@@ -19,17 +20,20 @@
             <Button x:Name="imBtn"
                 Text="IM"
                 TextColor="White"
-                BackgroundColor="Purple"/>
+                BackgroundColor="Purple"
+                Clicked="imBtn_Clicked"/>
 
             <Button x:Name="videoCallBtn"
                 Text="Video"
                 TextColor="White"
-                BackgroundColor="Purple"/>
+                BackgroundColor="Purple"
+                Clicked="videoCallBtn_Clicked"/>
 
             <Button x:Name="voiceCallBtn"
                 Text="Voice"
                 TextColor="White"
-                BackgroundColor="Purple"/>
+                BackgroundColor="Purple"
+                Clicked="voiceCallBtn_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

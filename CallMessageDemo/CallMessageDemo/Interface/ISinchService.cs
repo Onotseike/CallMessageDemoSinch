@@ -16,5 +16,7 @@ namespace CallMessageDemo.Interface
         void CallVideo(string receipientId);
 
         void MessageDetails();
+        string GetUserId();
+
     }
 }

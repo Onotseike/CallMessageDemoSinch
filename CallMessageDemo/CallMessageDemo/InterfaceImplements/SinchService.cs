@@ -27,6 +27,11 @@ namespace CallMessageDemo.InterfaceImplements
             sinchService.CallVoice(receipientId);
         }
 
+        public string GetUserId()
+        {
+            return sinchService.GetUserId();
+        }
+
         public bool IsSinchClientStarted()
         {
             return sinchService.IsSinchClientStarted();
@@ -40,7 +45,7 @@ namespace CallMessageDemo.InterfaceImplements
         public void SendMessage(string receipient, string message)
         {
             sinchService.SendMessage(receipient, message);
-        }
+        }       
 
         public void StartSinchClient(string username)
         {

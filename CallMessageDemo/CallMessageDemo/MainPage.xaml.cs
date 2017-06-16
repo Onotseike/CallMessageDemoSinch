@@ -11,34 +11,32 @@ using Xamarin.Forms.Xaml;
 
 namespace CallMessageDemo
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
         SinchService sinchService;
         public MainPage()
         {
-
             InitializeComponent();
-                       
+            sinchService = new SinchService();            
         }
 
 
 
-        private void loginBtn_Clicked(object sender, EventArgs e)
+        private async void loginBtn_Clicked(object sender, EventArgs e)
         {
-            sinchService = new SinchService();
             string userId = usernameId.Text;
             if (userId != null)
-            {                          
-                if (!sinchService.IsSinchClientStarted())
+            {
+                sinchService.StartSinchClient(userId);
+                while (!IsSinchStarted())
                 {
-                    sinchService.StartSinchClient(userId);
-                }
-                else
-                {
-                    Debug.WriteLine(sinchService.IsSinchClientStarted().ToString());
-                    LaunchReciepientAsync();
+                    progress.Text = "Please wait app is starting to sinch service...";
+                    await Task.Delay(500);
                 }
 
+                Debug.WriteLine(sinchService.IsSinchClientStarted().ToString());
+                LaunchReciepientAsync();
 
             }
 
@@ -46,7 +44,11 @@ namespace CallMessageDemo
 
         private  void LaunchReciepientAsync()
         {            
-           Navigation.PushAsync(new RecipientPage(usernameId.Text.ToString()));
+           Navigation.PushAsync(new RecipientPage(sinchService));
+        }
+        private bool IsSinchStarted()
+        {
+            return sinchService.IsSinchClientStarted();
         }
     }
 }

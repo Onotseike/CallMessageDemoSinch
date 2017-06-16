@@ -32,7 +32,7 @@ namespace CallMessageDemo.Droid.InterfaceImplementations
         public static readonly string CALL_ID = "CALL_ID";
         static readonly string TAG = nameof(SinchService);
 
-        SinchServiceInterface mSinchServiceInterface;
+        public SinchServiceInterface mSinchServiceInterface;
         ISinchClient mSinchClient;
         string mUserId;
 
@@ -122,6 +122,11 @@ namespace CallMessageDemo.Droid.InterfaceImplementations
         public void MessageDetails()
         {
             throw new NotImplementedException();
+        }
+
+        public string GetUserId()
+        {
+            return mUserId;
         }
 
         public interface IStartFailedListener

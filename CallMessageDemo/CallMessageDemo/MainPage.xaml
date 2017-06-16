@@ -4,11 +4,13 @@
              xmlns:local="clr-namespace:CallMessageDemo"
              x:Class="CallMessageDemo.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+	
     <StackLayout VerticalOptions="CenterAndExpand"
                  HorizontalOptions="CenterAndExpand">
+        <Label x:Name="progress"
+           Text="Welcome to Xamarin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
         <Label Text="Enter user name"
                TextColor="Purple"
                FontSize="Medium"/>
